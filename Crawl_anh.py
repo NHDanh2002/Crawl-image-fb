@@ -7,7 +7,8 @@ import os
 output_dir = 'temp'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
-
+    
+#Hàm lưu ảnh
 def LuuAnh(img_url):
     img_save_path = output_dir + '/' + str(id) + '.jpg'
     urllib.request.urlretrieve(img_url, img_save_path)
@@ -16,6 +17,8 @@ taikhoan = input("Nhập tài khoản facebook của bạn vào đây:")
 matkhau = input("Nhập mật khẩu facebook của bạn vào đây:")
 
 browser = webdriver.Chrome(executable_path = "chromedriver.exe")
+
+#Link mà bạn muốn lấy ảnh
 browser.get("https://www.facebook.com/Onmyojigame/photos/?ref=page_internal")
 #browser.get("https://www.facebook.com")
 
@@ -30,6 +33,7 @@ MatKhau.send_keys(Keys.ENTER)
 
 sleep(10) 
 
+#Lớp của thẻ mà bạn muốn tải
 imgs_list = browser.find_elements_by_xpath("//div[@class='x1n2onr6']")
 #print(imgs_list)
 #sleep(5)
