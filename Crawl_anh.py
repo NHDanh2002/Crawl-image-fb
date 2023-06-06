@@ -13,6 +13,7 @@ def LuuAnh(img_url):
     img_save_path = output_dir + '/' + str(id) + '.jpg'
     urllib.request.urlretrieve(img_url, img_save_path)
 
+#Nhập tài khoản mật khẩu facebook
 taikhoan = input("Nhập tài khoản facebook của bạn vào đây:")
 matkhau = input("Nhập mật khẩu facebook của bạn vào đây:")
 
